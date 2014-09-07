@@ -1,1 +1,5 @@
-#N canvas 2081 610 450 300 10;
+#N canvas 504 352 450 300 10;
+#X text 16 38 Version 1;
+#X text 16 53 https://github.com/Jigglebizz/pd-rpi-sensors.git;
+#X text 15 6 rpi_sensor external;
+#X text 15 23 Created by Michael Hawthorne (Jigglebizz) 2014;

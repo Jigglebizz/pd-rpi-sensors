@@ -1,3 +1,7 @@
+// rpi_sensor.c
+// Created by Michael Hawthorne (Jigglebizz) 2014
+// https://github.com/Jigglebizz/pd-rpi-sensors.git
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <bcm2835.h>
