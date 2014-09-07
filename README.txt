@@ -1,4 +1,4 @@
-Use this board attached to a Raspberry Pi B+ in order to interface 32 analog sensors to your PD project. Combined with a script to start your project at boot time, your Raspberry Pi is now capable of live musical performance. Make a MIDI sequencer, wearable synthesizer, sampler, or traditional synth. This is the first revision and only includes the ability to interface to analog sensors. Future revisions will allow the use of digital sensors as well as feedback via LED's or other digitally-driven peripherals.
+Use the board found in hardware/ in order to interface 32 analog sensors to your Raspberry Pi B+ PD project. Connect any analog sensors you wish, as long as they operate at 3.3V. Inputs are multiplexed by Intersil DG406 16-channel multiplexors and read by the Microchip MCP3202 12-bit ADC. Combined with a script to start your project at boot time, your Raspberry Pi B+ is now capable of live musical performance. Make a MIDI sequencer, wearable synthesizer, sampler, or connect a MIDI keyboard to make a traditional synth. This is the first revision and only includes the ability to interface to analog sensors. Future revisions will allow the use of digital sensors as well as feedback via LED's or other digitally-driven peripherals, as well as powering the Raspberry Pi and all sensors from a more useful power connector than the default USB-Micro supply.
 
 Install using:
 
@@ -14,4 +14,5 @@ make
 sudo make check
 sudo make install
 
+PD must be run as super user in order for the GPIO library to work correctly.
 
