@@ -31,7 +31,7 @@ void *rpi_sensor_new(void) {
     bcm2835_spi_begin();
     bcm2835_spi_setChipSelectPolarity(BCM2835_SPI_CS0, 0);
     // This is the fastest speed this chip will allow without giving bad data
-    bcm2835_spi_setClockDivider(BCM2835_SPI_CLOCK_DIVIDER_64);
+    bcm2835_spi_setClockDivider(BCM2835_SPI_CLOCK_DIVIDER_128);
     bcm2835_spi_setDataMode(BCM2835_SPI_MODE0);
 
     // Set up our mux1 selection pins
