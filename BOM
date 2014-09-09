@@ -1,7 +1,23 @@
+_-=IC's=-_
+
 2x DG406DJZ
 1x MCP3202
+
+_-=Components=-_
+
 2x 1K-resistors
+1x 150-Ohm resistor
+1x 330-Ohm ressitor
 1x 40x2 Female Header
+
+Note:
+R3 and R4 don't have to be 150/330 Ohms, respectively.
+They are being used together as a voltage divider to bring
+5V down to 3.3V for the Pi. You can use any two values for
+these two, provided R4 is twice as much as R3.
+
+_-=Hardware=-_
+
 4x 17mm Stand-off screws
 4X 2.5mm screws
 4x 2.5mm nuts
