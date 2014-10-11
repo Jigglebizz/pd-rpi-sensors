@@ -16,3 +16,4 @@ sudo make install
 
 PD must be run as super user in order for the GPIO library to work correctly.
 
+To view or edit the board/schematic, open it with DipTrace (www.diptrace.com). Various board fabs, like OSH Park, accept Diptrace files for fabrication.

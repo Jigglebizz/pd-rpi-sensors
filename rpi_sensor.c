@@ -20,7 +20,7 @@ void *rpi_sensor_new(void) {
     t_rpi_sensor *x = (t_rpi_sensor *)pd_new(rpi_sensor_class);
     
     // Set our outlet
-    x->l_out = outlet_new(&x->x_obj, &s_float);
+    x->l_out = outlet_new(&x->x_obj, &s_list);
 
     if (!bcm2835_init()) {
         error("Failure initializing gpio!");
@@ -30,7 +30,7 @@ void *rpi_sensor_new(void) {
     // set up SPI for ADC
     bcm2835_spi_begin();
     bcm2835_spi_setChipSelectPolarity(BCM2835_SPI_CS0, 0);
-    // This is the fastest speed this chip will allow without giving bad data
+    // This is a relatively slow speed. I think it can go faster.
     bcm2835_spi_setClockDivider(BCM2835_SPI_CLOCK_DIVIDER_128);
     bcm2835_spi_setDataMode(BCM2835_SPI_MODE0);
 
@@ -107,11 +107,11 @@ t_int rpi_read_adc(uint8_t channel) {
         error("ADC read error");
         return -1;
     }
-
+    
+    // put our results together
     int value = (data_buffer[1] & 0xF) << 8;
     value |= data_buffer[2];
     
-    // Put our result together and return it
     return value;
 }
 
